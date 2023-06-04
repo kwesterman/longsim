@@ -4,33 +4,18 @@
 \alias{simulate_outcome}
 \title{Simulates a longitudinal outcome variable}
 \usage{
-simulate_outcome(
-  t_mat,
-  G_mat,
-  E_mat,
-  beta_tY,
-  beta_GY,
-  beta_EY,
-  icc_Y,
-  var_e_Y
-)
+simulate_outcome(matrix_list, beta_list, icc_Y, var_e_Y, frac_missing = 0)
 }
 \arguments{
-\item{t_mat}{Matrix of times for each measurement}
+\item{matrix_list}{List of matrices affecting the mean of Y}
 
-\item{G_mat}{Matrix of genotypes (N x K)}
-
-\item{E_mat}{Matrix of exposures (N x K)}
-
-\item{beta_tY}{Linear slope of time effect on Y}
-
-\item{beta_GY}{Genotype effect size on Y}
-
-\item{beta_EY}{Exposure effect size on Y}
+\item{beta_list}{List of effect sizes associated with the matrices in matrix_list}
 
 \item{icc_Y}{Intraclass correlation coefficient for Y (clustering within an individual across time)}
 
 \item{var_e_Y}{Error variance for Y}
+
+\item{frac_missing}{Fraction of all values set to missing (MCAR)}
 }
 \value{
 Outcome matrix of dimension N_individuals x K timepoints

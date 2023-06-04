@@ -4,7 +4,7 @@
 \alias{simulate_genotype}
 \title{Simulates a matrix of genotypes for a single hypothetical variant}
 \usage{
-simulate_genotype(N, K, maf = 0.25)
+simulate_genotype(N, K, maf = 0.25, frac_missing = 0)
 }
 \arguments{
 \item{N}{Number of individuals}
@@ -12,6 +12,8 @@ simulate_genotype(N, K, maf = 0.25)
 \item{K}{Number of measurement timepoints (assumes equal number per individual for now)}
 
 \item{maf}{Genotype minor allele frequency}
+
+\item{frac_missing}{Fraction of all values set to missing (MCAR)}
 }
 \value{
 Genotype matrix of dimension N_individuals x K timepoints

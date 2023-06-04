@@ -8,7 +8,7 @@
 convert_wide_mat_to_long_df(wide_mat, var_name)
 }
 \arguments{
-\item{wide_mat}{Matrix of dimension N_individuals x K_timepoints.}
+\item{wide_mat}{Matrix of dimension N_individuals x K_timepoints}
 
 \item{var_name}{Variable name for the data values}
 }
